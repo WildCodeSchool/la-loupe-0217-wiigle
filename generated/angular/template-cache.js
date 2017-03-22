@@ -115,23 +115,38 @@ angular.module("app").run(["$templateCache", function($templateCache) {
     "        <!--START col géante lg 8 -->\n" +
     "        <div class=\"col-lg-8\" style=\"border:1px solid red;\">\n" +
     "            <div class=\"row\">\n" +
+    "\n" +
+    "\n" +
+    "                <!-- VIDEO -->\n" +
+    "\n" +
     "                <div class=\"col-lg-8 video\" style=\"border:1px solid yellow;\">\n" +
     "                    <img class=\"img-responsive border\" src=\"img/chat1.png\" alt=\"\">\n" +
     "                </div>\n" +
     "\n" +
+    "                <!-- IMAGE -->\n" +
+    "\n" +
     "                <div class=\"col-lg-4 image\" style=\"border:1px solid yellow;\">\n" +
-    "                    <img class=\"img-responsive border\" src=\"img/chat2.jpeg\" alt=\"\">\n" +
+    "                  <img class=\"img-responsive border\" src=\"{{image.value[0].contentUrl}}\" alt=\"\"> </div>\n" +
     "                </div>\n" +
     "            </div>\n" +
     "            <div class=\"row ligne2\">\n" +
+    "\n" +
+    "                <!-- GIF -->\n" +
     "                <div class=\"col-lg-4\" ng-repeat=\"i in gif \" ng-show=\"$first\">\n" +
     "                    <img class=\"img-responsive\" src=\"{{i.images.downsized.url}}\" alt=\"\">\n" +
     "                </div>\n" +
-    "                <div class=\"col-lg-8 film text-center\" style=\"border:1px solid yellow\">\n" +
-    "                    <div id=\"film\">\n" +
+    "\n" +
+    "                <!-- FILM -->\n" +
+    "                <div class=\"col-lg-8 col-md-8 col-sm-12 col-xs-12 film\" style=\"border:1px solid yellow\">\n" +
+    "                    <div class=\"film\">\n" +
     "                        <div ng-if=\"details.Response==='True'\" class=\"ng-binding ng-scope\">\n" +
     "                            <div id=\"results\">\n" +
-    "                                <img ng-src=\"{{ details.Poster=='N/A' ? 'http://placehold.it/150x220&text=N/A' : details.Poster }}\">\n" +
+    "                              <div class=\"col-lg-5 col-md-5 col-sm-5 col-xs-12\">\n" +
+    "                                <img class=\"img-responsive center-block\" ng-src=\"{{ details.Poster=='N/A' ? 'http://placehold.it/150x220&text=N/A' : details.Poster }}\">\n" +
+    "                              </div>\n" +
+    "\n" +
+    "                              <div class=\"col-lg-7 col-md-7 col-sm-7 col-xs-12\">\n" +
+    "\n" +
     "                                <h3 class=\"title\"><a href=\"http://imdb.com/title/{{ details.imdbID }}\" target=\"_blank\">{{ details.Title }}</a></h3>\n" +
     "                                <ul class=\"film-details\">\n" +
     "                                    <li><strong>Released on: </strong> {{ details.Released }} ({{ details.Runtime }})</li>\n" +
@@ -144,21 +159,30 @@ angular.module("app").run(["$templateCache", function($templateCache) {
     "                                    <li><strong>IMDb Rating: </strong> {{ details.imdbRating }}</li>\n" +
     "                                    <li><strong>Rotten Tomatoes: </strong> {{ details.tomatoRating }}</li>\n" +
     "                                </ul>\n" +
+    "\n" +
+    "\n" +
+    "                              </div>\n" +
+    "\n" +
+    "\n" +
     "                            </div>\n" +
     "                        </div>\n" +
     "                    </div>\n" +
     "                </div>\n" +
+    "\n" +
     "            </div>\n" +
     "        </div>\n" +
     "        <!-- END col géante lg 8 -->\n" +
     "        <div class=\"col-lg-4\" style=\"border: 1px solid red;\">\n" +
     "            <div class=\"row\">\n" +
+    "                <!-- COLOR -->\n" +
     "                <div class=\"col-xs-12 border couleur text-center\">\n" +
     "                    <p>Couleur</p>\n" +
     "                </div>\n" +
+    "                <!-- WEBSITE -->\n" +
     "                <div class=\"site border col-xs-12 text-center\">\n" +
     "                    <h1>Site</h1>\n" +
     "                </div>\n" +
+    "                <!-- MUSIC -->\n" +
     "                <div class=\"col-xs-12 border musique text-center\">\n" +
     "                    <p>musique</p>\n" +
     "                </div>\n" +

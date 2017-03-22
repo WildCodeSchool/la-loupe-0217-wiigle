@@ -7406,6 +7406,40 @@ body{
 .video{
 
 }
+
+/* Film section */
+.film {
+	text-align: left;
+	background-color: white;
+	border-radius: 2em;
+	padding: 1em 0.5em 0.5em 0.5em;
+}
+.film img {
+	padding: 0 0 1em 0;
+}
+.film h3 {
+	font-size: 1.5em;
+	font-weight: 600;
+	margin: 0 0 1em 0;
+}
+.film h3 a {
+	color: #340B40;
+	text-decoration: none;
+}
+.film h3 a:hover {
+	color: #EDB2FF;
+}
+.film strong {
+	color: #340B40;
+}
+.film ul {
+	font-weight: 600;
+	font-size: 0.9em;
+	list-style: none;
+	padding: 0;
+	margin: 0 0 1em 0;
+}
+
 .ligne2{
 	margin-top: 2%;
 }
@@ -7423,7 +7457,7 @@ body{
 	background-color: green;
 	height: 120px;
 }
-/*ENd affichage des reusltats*/
+/*ENd affichage des resultats*/
 
 
 /*# sourceMappingURL=app.css.map */
