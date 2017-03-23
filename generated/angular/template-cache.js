@@ -119,8 +119,9 @@ angular.module("app").run(["$templateCache", function($templateCache) {
     "\n" +
     "                <!-- VIDEO -->\n" +
     "\n" +
-    "                <div class=\"col-lg-8 video\" style=\"border:1px solid yellow;\">\n" +
-    "                    <img class=\"img-responsive border\" src=\"img/chat1.png\" alt=\"\">\n" +
+    "                <div ng-bind-html=\"bindHTML\" class=\"col-lg-8 video-container video\" style=\"border:1px solid yellow;\">\n" +
+    "\n" +
+    "\n" +
     "                </div>\n" +
     "\n" +
     "                <!-- IMAGE -->\n" +
@@ -128,7 +129,7 @@ angular.module("app").run(["$templateCache", function($templateCache) {
     "                <div class=\"col-lg-4 image\" style=\"border:1px solid yellow;\">\n" +
     "                  <img class=\"img-responsive border\" src=\"{{image.value[0].contentUrl}}\" alt=\"\"> </div>\n" +
     "                </div>\n" +
-    "          \n" +
+    "\n" +
     "            <div class=\"row ligne2\">\n" +
     "\n" +
     "                <!-- GIF -->\n" +
