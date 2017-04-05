@@ -380,10 +380,9 @@ a:hover {
     margin-bottom: 0.5em;
 }
 
-/* Spinner */
-
-
-
+a.linkcolor{
+  cursor: pointer;
+}
 
 /*ENd affichage des resultats*/
 /* MEDIA QUERYS */

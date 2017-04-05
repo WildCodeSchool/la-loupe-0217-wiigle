@@ -20,11 +20,11 @@
 </div>
 <!-- END Barre de recherche -->
 <div class="container-fluid" ng-show="spinner">
-  <div class="row">
-    <div class="spinner col-xs-offset-5 col-xs-1">
-      <img src="../img/spinner.gif" alt="spinner loader" class=""   />
+    <div class="row">
+        <div class="spinner col-xs-offset-5 col-xs-1">
+            <img src="../img/spinner.gif" alt="spinner loader" class="" />
+        </div>
     </div>
-  </div>
 </div>
 
 <div class="container-fluid result" ng-show="resultatrecherche">
@@ -94,10 +94,13 @@
         <!-- START COULEUR -->
         <div class="col-lg-3 col-md-5 col-sm-5 third-column">
             <div ng-hide="hideColor">
-                <div class="color" style="background-color: #{{ color.colors[0].hex }};">
-                    <p>#{{ color.colors[0].hex }}</p>
-                </div>
+                <a class="linkcolor" copy-to-clipboard="#{{ color.colors[0].hex }}">
+                    <div onclick="alert('The color has been copied to the clipboard')" class="color" style="background-color: #{{ color.colors[0].hex }}">
+                        <p>#{{ color.colors[0].hex }}</p>
+                    </div>
+                </a>
             </div>
+
             <div ng-hide="imgColor">
                 <p>sorry we didn't find any color of "{{query}}" so there is a cat !</p>
                 <img src="img/404.jpg" alt="">
